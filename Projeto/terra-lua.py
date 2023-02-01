@@ -27,6 +27,9 @@ t0 = 0
 dt = 1   #teste 
 tf = 5000   #teste
 
-while t0 < tf: 
-    
-    t0 += dt
+while t0 < tf:
+	R_lt = r_l - r_t
+	mR_lt = np.sqrt((R_lt**2).sum())
+	F_tl = ((G*m_t*m_l)/mR_lt**3)*R_lt
+	
+	t0 += dt
